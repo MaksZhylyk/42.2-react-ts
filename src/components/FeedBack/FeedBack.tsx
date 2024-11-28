@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Button from "../Button/Button";
 import "./style.css";
+import { FeedbackContainer } from "./style";
+import { FeedbackResultContainer } from "./style";
+import { LikeDislikeContainer } from "./style";
+import { StyledResult } from "./style";
 
 function Feedback() {
   const [likes, setLikes] = useState<number>(0);
@@ -20,19 +24,19 @@ function Feedback() {
   };
 
   return (
-    <div className="feedback-container">
-      <div className="feedback-result-container">
-        <div className="like-dislike-container">
+    <FeedbackContainer>
+      <FeedbackResultContainer>
+        <LikeDislikeContainer>
           <div className="result">{likes}</div>
           <Button name="LIKE" onClick={addLike} />
-        </div>
-        <div className="like-dislike-container">
-          <div className="result">{dislikes}</div>
+        </LikeDislikeContainer>
+        <LikeDislikeContainer>
+          <StyledResult>{dislikes}</StyledResult>
           <Button name="DISLIKE" onClick={addDislike} />
-        </div>
-      </div>
+        </LikeDislikeContainer>
+      </FeedbackResultContainer>
       <Button name="RESET RESULTS" onClick={resetResults} />
-    </div>
+    </FeedbackContainer>
   );
 }
 

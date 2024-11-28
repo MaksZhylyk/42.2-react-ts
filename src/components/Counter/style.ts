@@ -1,4 +1,6 @@
-.counter-container {
+import styled from "@emotion/styled";
+
+export const CounterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,14 +9,14 @@
   padding: 20px;
   background-color: rgb(200, 212, 216);
   border-radius: 4px;
-}
+`;
 
-.button-wrapper {
+export const ButtonWrapper = styled.div`
   width: 100px;
-}
+`;
 
-.counter-result {
+export const CounterResult = styled.div`
   font-size: 24px;
   font-weight: bold;
   color: rgb(19, 19, 87);
-}
+`;
