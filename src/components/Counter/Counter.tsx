@@ -9,7 +9,7 @@ function Counter() {
 
   //Step 2 - call hook useState and give him initialState
   //
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
   //const result - useState(0);
   //console.log(result);
   //const count = result[0];
