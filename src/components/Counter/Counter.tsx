@@ -1,5 +1,8 @@
 import "./style.css";
 import Button from "../Button/Button";
+import { CounterContainer } from "./style";
+import { ButtonWrapper } from "./style";
+import { CounterResult } from "./style";
 
 //Step 1 - import hook useState from react
 import { useState } from "react";
@@ -26,15 +29,15 @@ function Counter() {
   };
 
   return (
-    <div className="counter-container">
-      <div className="button-wrapper">
+    <CounterContainer>
+      <ButtonWrapper>
         <Button name="-" onClick={onMinusClick} />
-      </div>
-      <div className="counter-result">{count}</div>
-      <div className="button-wrapper">
+      </ButtonWrapper>
+      <CounterResult>{count}</CounterResult>
+      <ButtonWrapper>
         <Button name="+" onClick={onPlusClick} />
-      </div>
-    </div>
+      </ButtonWrapper>
+    </CounterContainer>
   );
 }
 
