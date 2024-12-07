@@ -1,6 +1,6 @@
 import Button from "../Button/Button";
 import Input from "../Input/Input";
-import "./style.css";
+
 import { LoginFormTitle } from "./style";
 import { LoginFormWrapper } from "./style";
 import { InputsContainer } from "./style";
