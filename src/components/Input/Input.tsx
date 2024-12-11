@@ -1,5 +1,5 @@
 import { InputProps } from "./type";
-import { InputContainer, InputElement, Label } from "./styles";
+import { InputContainer, InputElement, Label, ErrorMessage } from "./styles";
 
 function Input({
   name,
@@ -9,6 +9,7 @@ function Input({
   label,
   value,
   onChange,
+  error,
 }: InputProps) {
   // console.log("Input render or re-render");
 
@@ -25,6 +26,7 @@ function Input({
         placeholder={placeholder}
         className="input-element"
       />
+      <ErrorMessage>{error}</ErrorMessage>
     </InputContainer>
   );
 }
